@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Calculator Image</title>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+
+    <style>
+      body {
+        background-color: #f8f9fa;
+      }
+
+      .img-container {
+        position: relative;
+        width: 300px;
+        height: 1500px;
+      }
+
+      .btn-overlay {
+        position: absolute;
+        width: 55px;
+        height: 55px;
+        background: transparent;
+        border: 1px;
+        cursor: pointer;
+      }
+
+      .calc-display {
+        position: absolute;
+        height: 40px;
+        left: 40px;
+        top: 35px;
+        width: 225px;
+        background: greenyellow;
+        border: 2px solid #ccc;
+        border-radius: 5px;
+        font-size: 16px;
+        text-align: right;
+        padding: 10px;
+        overflow: hidden;
+      }
+    </style>
+  </head>
+
+  <body
+    class="d-flex flex-column justify-content-center align-items-center py-5"
+  >
+    <header>
+      <h2 class="text-center mb-4">Calculator</h2>
+    </header>
+
+    <main>
+      <br />
+
+      <div class="img-container">
+        <img
+          src="Screenshot 2025-08-02 002137.png"
+          alt="Calculator Image"
+          width="300"
+          height="1500"
+          class="img-fluid d-block ms-auto"
+        />
+
+        <!--Display Screen-->
+        <div class="calc-display" id="display">0</div>
+
+        <!--Row 1 -->
+        <button
+          class="btn-overlay"
+          style="top: 120px; left: 0px"
+          onclick="press('7')"
+        ></button>
+
+        <button
+          class="btn-overlay"
+          style="top: 120px; left: 75px"
+          onclick="press('8')"
+        ></button>
+
+        <button
+          class="btn-overlay"
+          style="top: 120px; left: 150px"
+          onclick="press('9')"
+        ></button>
+
+        <button
+          class="btn-overlay"
+          style="top: 120px; left: 225px"
+          onclick="press('-')"
+        ></button>
+
+        <!--Row2-->
+        <button
+          class="btn-overlay"
+          style="top: 180px; left: 0px"
+          onclick="press('4')"
+        ></button>
+
+        <button
+          class="btn-overlay"
+          style="top: 180px; left: 75px"
+          onclick="press('5')"
+        ></button>
+
+        <button
+          class="btn-overlay"
+          style="top: 180px; left: 150px"
+          onclick="press('6')"
+        ></button>
+
+        <button
+          class="btn-overlay"
+          style="top: 180px; left: 225px"
+          onclick="press('+')"
+        ></button>
+
+        <!--Row3-->
+        <button
+          class="btn-overlay"
+          style="top: 240px; left: 0px"
+          onclick="press('1')"
+        ></button>
+
+        <button
+          class="btn-overlay"
+          style="top: 240px; left: 75px"
+          onclick="press('2')"
+        ></button>
+
+        <button
+          class="btn-overlay"
+          style="top: 240px; left: 150px"
+          onclick="press('3')"
+        ></button>
+
+        <button
+          class="btn-overlay"
+          style="top: 240px; left: 225px"
+          onclick="press('/')"
+        ></button>
+
+        <!--Row4-->
+        <button
+          class="btn-overlay"
+          style="top: 300px; left: 0px"
+          onclick="press('0')"
+        ></button>
+
+        <button
+          class="btn-overlay"
+          style="top: 300px; left: 75px"
+          onclick="press('.')"
+        ></button>
+
+        <button
+          class="btn-overlay"
+          style="top: 300px; left: 150px"
+          onclick="press('=')"
+        ></button>
+
+        <button
+          class="btn-overlay"
+          style="top: 300px; left: 225px"
+          onclick="press('*')"
+        ></button>
+      </div>
+
+      <script>
+        let currentInput = "";
+        let operator = null;
+        let firstNumber = null;
+
+        function press(value) {
+          const display = document.querySelector("#display");
+
+          if (
+            value === "+" ||
+            value === "-" ||
+            value === "*" ||
+            value === "/"
+          ) {
+            if (currentInput !== "") {
+              operator = value;
+              firstNumber = parseFloat(currentInput);
+              display.innerText = operator;
+              currentInput = "";
+            }
+          } else if (value === "=") {
+            if (currentInput !== "" && firstNumber !== null) {
+              let secondNumber = parseFloat(currentInput);
+              let result = 0;
+
+              if (operator === "+") {
+                result = firstNumber + secondNumber;
+              } else if (operator === "-") {
+                result = firstNumber - secondNumber;
+              } else if (operator === "*") {
+                result = firstNumber * secondNumber;
+              } else if (operator === "/") {
+                result = firstNumber / secondNumber;
+              }
+
+              display.innerText = result % 1 === 0 ? result : result.toFixed(2);
+              currentInput = result.toString();
+              firstNumber = null;
+              secondNumber = null;
+            }
+          }
+
+          //if value is digit
+          else {
+            currentInput += value;
+            display.innerText = currentInput;
+          }
+        }
+      </script>
+    </main>
+  </body>
+</html>
