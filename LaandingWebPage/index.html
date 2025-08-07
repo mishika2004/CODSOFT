@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>HTML + CSS</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"/>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+
+    <style>
+       .hero-img {
+        width: 100%;
+        border-radius: 20px;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+      }
+
+      .hero-text {
+        position: absolute;
+        top: 30%;
+        left: 10%;
+        color: #000;
+        max-width: 400px;
+      }
+
+      body {
+      font-family: 'Poppins', sans-serif;
+     }
+
+     body {
+     background-color: #fff5e6;
+       }
+
+
+      </style>
+  </head>
+
+  <body>
+    <header>
+      <nav class="navbar navbar-expand-lg bg-body-tertiary">
+       <div class="container">
+        <img
+          src="https://static.vecteezy.com/system/resources/thumbnails/007/646/186/small_2x/travel-agency-logo-template-vector.jpg"
+          height="70"
+          alt="Travel Logo"
+        />
+         <a class="navbar-brand fw-bold" href="#">SkyDrift</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+           <span class="navbar-toggler-icon"></span>
+          </button>
+       <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
+        <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#about">About</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#feedback">Feedback</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#package">Package</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#contact">Contact</a>
+            </li>
+
+
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#whyUs">Why Us?</a>
+            </li>
+        </ul>
+      </div>
+          <div class="d-none d-lg-block">
+          <a href="#contact"><button id=btnTrip class="btn btn-primary float-end ms-auto">Book Trip</button></a>
+          </div>
+      </nav>
+    </header>
+    <br/><br/>
+
+    <main>
+      <section class="container hero-section">
+        <img src="https://images.unsplash.com/photo-1556388158-158ea5ccacbd?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Flight" class="hero-img">
+        <div class="hero-text">
+          <small class="text-uppercase">Elevate Your Travel Journey</small>
+          <p>Unleash Your Wanderlust With SkyDrift</p>
+          <h1 class="fw-bold">Experience The Magic Of Flight!</h1>
+          <a href="#contact"><button class="btn btn-primary mt-3">Book A Trip Now</button></a>
+        </div>
+      </section>
+       
+
+      <section class="text-center partners container py-5">
+      <h5 class="fst-italic text-muted text-uppercase mb-4">Trusted By</h5><hr/>
+      <div class="d-flex justify-content-center align-items-center flex-wrap gap-4">
+        <img
+          src="https://upload.wikimedia.org/wikipedia/commons/6/69/Airbnb_Logo_B%C3%A9lo.svg"
+          height="30"
+          alt="airbnb"
+        />
+        <img
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQOZGn-xjyDvoyQtfLdagovi7LLhseU1mY-ew&s"
+          height="30"
+          alt="booking"
+        />
+        <img
+          src="https://images.seeklogo.com/logo-png/25/1/trivago-logo-png_seeklogo-259989.png"
+          height="30"
+          alt="trivago"
+        />
+        <img
+          src="https://logos-world.net/wp-content/uploads/2021/03/Expedia-Logo.png"
+          height="30"
+          alt="expedia"
+        />
+      </div>
+    </section>
+
+
+    <section class="container my-5">
+      <h2 class="text-center mb-4">Popular Destinations</h2>
+      <div class="row g-4">
+      <div class="col-md-3">
+      <div class="card" style="width: 18rem;">
+        <img src="https://i.insider.com/649b13386eb0a800194d589a?width=700" class="card-img-top" alt="Paris">
+        <div class="card-body">
+          <h5 class="card-title">Paris, France</h5>
+          <p class="card-text">Enjoy the City of Love with iconic landmarks and rich culture.</p>
+          <a href="#" class="btn btn-primary" onclick="alert('Redirecting to Paris packages...')">Let's Explore</a>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="col-md-3">
+      <div class="card" style="width: 18rem;">
+        <img src="https://images.unsplash.com/photo-1684214536008-5c64a0622143?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8bWFsZGl2ZXMlMjBpc2xhbmRzfGVufDB8fDB8fHww" class="card-img-top" alt="Maldives">
+        <div class="card-body">
+          <h5 class="card-title">Maldives</h5>
+          <p class="card-text">Relax in the serene blue waters and stunning beaches of Maldives.</p>
+          <a href="#" class="btn btn-primary" onclick="alert('Redirecting to Maldives packages...')">Let's Explore</a>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="col-md-3">
+      <div class="card" style="width: 18rem;">
+        <img src="https://img.freepik.com/free-photo/aerial-view-tokyo-cityscape-with-fuji-mountain-japan_335224-148.jpg?semt=ais_hybrid&w=740&q=80" class="card-img-top" alt="Tokyo">
+        <div class="card-body">
+          <h5 class="card-title">Tokyo, Japan</h5>
+          <p class="card-text">Dive into the vibrant culture and advanced tech of Tokyo.</p>
+          <a href="#" class="btn btn-primary" onclick="alert('Redirecting to Tokyo packages...')">Let's Explore</a>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="col-md-3">
+      <div class="card" style="width: 18rem;">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcShY07Ej85i-39ePYYKlhs9YRCdvEKNiMoa3g&s" class="card-img-top" alt="Santorini">
+        <div class="card-body">
+          <h5 class="card-title">Santorini, Greece</h5>
+          <p class="card-text">Famous for its white-washed houses, blue domes, and sunset views over the Aegean Sea.</p>
+          <a href="#" class="btn btn-primary" onclick="alert('Redirecting to Santorini packages...')">Let's Explore</a>
+        </div>
+      </div>
+    </div>
+  </div>
+    </section>
+
+
+
+    <section class="container my-5" id="feedback">
+      <h2 class="text-center mb-4">What Our Travellers Say</h2>
+    
+      <div class="d-flex gap-4 overflow-auto px-3">
+    
+        <!--  Testimonial 1 -->
+        <div class="card p-3 flex-shrink-0" style="width: 20rem;">
+          <div class="d-flex align-items-center mb-3">
+            <img src="https://randomuser.me/api/portraits/women/65.jpg" class="rounded-circle me-3" height="50" alt="User">
+            <div>
+              <h6 class="mb-0">Ayesha Khan</h6>
+              <small class="text-muted">Dubai</small>
+            </div>
+          </div>
+          <p>"SkyDrift gave me the best vacation experience! Everything was perfectly organized. Will book again soon!"</p>
+        </div>
+    
+        <!--  Testimonial 2 -->
+        <div class="card p-3 flex-shrink-0" style="width: 20rem;">
+          <div class="d-flex align-items-center mb-3">
+            <img src="https://randomuser.me/api/portraits/men/45.jpg" class="rounded-circle me-3" height="50" alt="User">
+            <div>
+              <h6 class="mb-0">Rahul Mehta</h6>
+              <small class="text-muted">Delhi</small>
+            </div>
+          </div>
+          <p>"Loved the Paris package! The team was super helpful and the prices were great. Highly recommended."</p>
+        </div>
+    
+        <!-- Testimonial 3 -->
+        <div class="card p-3 flex-shrink-0" style="width: 20rem;">
+          <div class="d-flex align-items-center mb-3">
+            <img src="https://randomuser.me/api/portraits/women/22.jpg" class="rounded-circle me-3" height="50" alt="User">
+            <div>
+              <h6 class="mb-0">Emily Roy</h6>
+              <small class="text-muted">London</small>
+            </div>
+          </div>
+          <p>"Amazing service and very smooth booking. I had a blast in Tokyo! Will definitely use SkyDrift again."</p>
+        </div>
+    
+        <div class="card p-3 flex-shrink-0" style="width: 20rem;">
+          <div class="d-flex align-items-center mb-3">
+            <img src="https://randomuser.me/api/portraits/men/30.jpg" class="rounded-circle me-3" height="50" alt="User">
+            <div>
+              <h6 class="mb-0">Kabir Singh</h6>
+              <small class="text-muted">Mumbai</small>
+            </div>
+          </div>
+          <p>"SkyDrift made my trip to Greece unforgettable. The itinerary was perfect and the hotels were top-class!"</p>
+        </div>    
+      </div>
+    </section>
+
+
+
+    <section class="container my-5" id="package">
+      <h2 class="text-center mb-4">Top Travel Packages</h2>
+    
+      <div class="row g-4">
+    
+        <!-- Package 1 -->
+        <div class="col-md-4">
+          <div class="card">
+            <img src="https://images.unsplash.com/photo-1526778548025-fa2f459cd5c1?q=80&w=1200" class="card-img-top" alt="Bali">
+            <div class="card-body">
+              <h5 class="card-title">Bali Escape</h5>
+              <p class="card-text">5 Nights / 6 Days - Beach resort stay, water activities & local tours.</p>
+              <p class="fw-bold text-primary">₹45,000/person</p>
+              <a href="#contact" class="btn btn-outline-primary">Book Now</a>
+            </div>
+          </div>
+        </div>
+    
+        <!-- Package 2 -->
+        <div class="col-md-4">
+          <div class="card">
+            <img src="https://media.istockphoto.com/id/1364217752/photo/lauterbrunnen-valley-switzerland.jpg?s=612x612&w=0&k=20&c=aB7YIkBfiexVtQhh0WJ-4NP95O8_AVqEpPCwPA-3hiQ=" class="card-img-top" alt="Switzerland">
+            <div class="card-body">
+              <h5 class="card-title">Swiss Adventure</h5>
+              <p class="card-text">7 Nights / 8 Days - Alps, scenic train rides, lakes & cities.</p>
+              <p class="fw-bold text-primary">₹89,000/person</p>
+              <a href="#contact" class="btn btn-outline-primary">Book Now</a>
+            </div>
+          </div>
+        </div>
+    
+        <!-- Package 3 -->
+        <div class="col-md-4">
+          <div class="card">
+            <img src="https://images.unsplash.com/photo-1541417904950-b855846fe074?q=80&w=1200" class="card-img-top" alt="Thailand">
+            <div class="card-body">
+              <h5 class="card-title">Thailand Getaway</h5>
+              <p class="card-text">4 Nights / 5 Days - Bangkok & Phuket with island hopping.</p>
+              <p class="fw-bold text-primary">₹32,000/person</p>
+              <a href="#contact" class="btn btn-outline-primary">Book Now</a>
+            </div>
+          </div>
+        </div>
+    
+      </div>
+    </section>
+
+
+    <section class="container my-5" id="whyUs">
+      <h2 class="text-center mb-4 fw-bold">Why Choose Us?</h2><hr/>
+      <div class="row text-center g-4">
+    
+        <!-- Feature 1 -->
+        <div class="col-md-4">
+          <div class="p-4 border rounded shadow-sm h-100">
+            <i class="bi bi-star-fill fs-1 text-warning mb-3"></i>
+            <h5 class="fw-bold">Top-Rated Packages</h5>
+            <p class="text-muted">Handpicked destinations with 5-star reviews from thousands of happy travelers.</p>
+          </div>
+        </div>
+    
+        <!-- Feature 2 -->
+        <div class="col-md-4">
+          <div class="p-4 border rounded shadow-sm h-100">
+            <i class="bi bi-cash-stack fs-1 text-success mb-3"></i>
+            <h5 class="fw-bold">Affordable Prices</h5>
+            <p class="text-muted">We offer unbeatable prices without compromising on quality and experience.</p>
+          </div>
+        </div>
+    
+        <!-- Feature 3 -->
+        <div class="col-md-4">
+          <div class="p-4 border rounded shadow-sm h-100">
+            <i class="bi bi-headset fs-1 text-primary mb-3"></i>
+            <h5 class="fw-bold">24/7 Support</h5>
+            <p class="text-muted">Our travel experts are available round-the-clock to assist you anytime, anywhere.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    
+    <section class="container my-5" id="about">
+      <div class="row align-items-center">
+        <div class="col-md-6">
+          <img src="airport.jpg" class="img-fluid rounded shadow" alt="About SkyDrift">
+        </div>
+        <div class="col-md-6">
+          <h2 class="fw-bold mb-3">About SkyDrift</h2>
+          <p class="text-muted">
+            At SkyDrift, we believe travel is more than just visiting new places—it's about creating unforgettable memories. Whether you seek adventure, luxury, or relaxation, our customized travel packages are designed to give you the best experience possible.
+          </p>
+          <p class="text-muted">
+            With trusted partners, expert guidance, and a passion for exploring the world, we’re here to make your travel dreams come true. Join thousands of happy travelers who choose SkyDrift for their journeys.
+          </p>
+          <a href="#package" class="btn btn-outline-primary mt-3">Learn More</a>
+        </div>
+      </div>
+    </section>
+    
+
+    <section id="contact" class="container py-5">
+      <h2 class="text-center mb-4">Contact Us</h2>
+      <p class="text-center mb-5">Have questions or ready to book your dream trip? Reach out to us!</p>
+    
+      <div class="row justify-content-center">
+        <div class="col-md-6">
+          <form>
+            <div class="mb-3">
+              <label for="name" class="form-label">Your Name</label>
+              <input type="text" class="form-control" id="name" placeholder="Enter your name" required>
+            </div>
+    
+            <div class="mb-3">
+              <label for="email" class="form-label">Email address</label>
+              <input type="email" class="form-control" id="email" placeholder="Enter your email" required>
+            </div>
+    
+            <div class="mb-3">
+              <label for="message" class="form-label">Message</label>
+              <textarea class="form-control" id="message" rows="4" placeholder="Write your message..." required></textarea>
+            </div>
+    
+            <button type="submit" class="btn btn-primary w-100" onclick="showAlert()">Send Message</button>
+          </form>
+        </div>
+      </div>
+    </section>
+    
+      </main>
+
+      <footer class="bg-dark text-white text-center py-4 mt-5">
+        <div class="container">
+          <p class="mb-1">&copy; 2025 SkyDrift. All rights reserved.</p>
+          <p class="mb-2">Follow us on</p>
+          <div class="d-flex justify-content-center gap-3">
+            <a href="#" class="text-white text-decoration-none">Facebook</a>
+            <a href="#" class="text-white text-decoration-none">Instagram</a>
+            <a href="#" class="text-white text-decoration-none">Twitter</a>
+          </div>
+        </div>
+      </footer>
+      
+
+      <script>
+         function showAlert() {
+          event.preventDefault(); 
+           const name = document.getElementById("name").value;
+            alert(`Thank you for Booking, ${name}!`);
+          }
+        </script>
+
+  </body>
+
+
+</html>
